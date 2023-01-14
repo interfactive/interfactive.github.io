@@ -196,9 +196,11 @@ function updatePortionVisualCue(newNumCups){
 
     description = "Size of " + numFists + " of your fists";
     
-    let currentFistID = 0;
-    for (currentFistID = 0; currentFistID <= numFists; currentFistID++){               
-        visual += "<span id='fist-" + currentFistID + "' class='fistful'>✊</span>";        
+    // let currentFistID = 0;
+    let currentFistID = 1;
+    // for (currentFistID = 0; currentFistID <= numFists; currentFistID++){               
+    for (currentFistID = 1; currentFistID <= numFists; currentFistID++){               
+        visual += "<span id='fist-" + currentFistID + "' class='fistful'>✊</span>";  //✊      
     }
     
     if (numFists == 0.5){
@@ -211,8 +213,9 @@ function updatePortionVisualCue(newNumCups){
     portionVisual.innerHTML = visual;
 
     let lastFist = document.getElementById("fist-" + (currentFistID-1));
-    lastFist.style = "mask-image: linear-gradient(to left, transparent "+ Math.round(fistFractionPercent)+"%, #fff)";
-
+    // lastFist.style = "mask-image: linear-gradient(to left, transparent "+ Math.round(fistFractionPercent)+"%, #fff); webkit-mask-image: linear-gradient(to left, transparent "+ Math.round(fistFractionPercent)+"%, #fff);";    
+    // lastFist.style["mask-image"] = "linear-gradient(to left, transparent "+ Math.round(fistFractionPercent)+"%, #fff);" 
+    // lastFist.style["webkit-mask-image"] = "linear-gradient(to left, transparent "+ Math.round(fistFractionPercent)+"%, #fff);";    
 }
 
 
