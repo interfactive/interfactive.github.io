@@ -41,11 +41,11 @@ updateThresholds("numSodium", 2300, 200, 765, 766, -1, false); // 200, 349, 350
 updateThresholds("numCarbs", 300, -1, -1, -1, -1, true);   
 updateThresholds("numFiber", 28, 3, -1, 2, 23, true); 
 updateThresholds("numSugars", 50, -1, -1, -1, -1, false);
-updateThresholds("numAdded-Sugars", -1, -1, 1.2, 4.8, -1, false);   //20% DV or more of added sugars per serving is considered high; 5% DV or less of added sugars per serving is considered low
+updateThresholds("numAdded-Sugars", -1, -1, -1, 4.8, -1, false);   //20% DV or more of added sugars per serving is considered high; 5% DV or less of added sugars per serving is considered low
 
 
 
-updateThresholds("numVitamin-D", 20, 0, -1, 1, 1333, true);        // 4000 / 3
+updateThresholds("numVitamin-D", 20, -1, -1, 1, 1333, true);        // 4000 / 3
 updateThresholds("numCalcium", 1300, -1, -1, 100, 500, true);    // no more than 500 in a single dose
 updateThresholds("numIron", 18, -1, -1, 0.9, 20, true);          // 20mg (~70/3) is considered a high dose at once (NHS UK - https://www.nhs.uk/conditions/vitamins-and-minerals/iron/)
 updateThresholds("numPotassium", 4700, -1, -1, 200, -1, true);    //A food that is considered “high-potassium” generally has 200 mg or more potassium per serving    
