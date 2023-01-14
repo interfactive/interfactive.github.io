@@ -55,7 +55,7 @@ updateThresholds("numPotassium", 4700, -1, -1, 200, -1, true);    //A food that 
 nutrientVars["numCups"]["element"].innerHTML = (Math.round(slider.value * 100) / 100).toFixed(2);
 
 // update background color for portion
-updateColor("numCups", nutrientVars["numCups"]["value"], 1, -1, 1);
+// updateColor("numCups", nutrientVars["numCups"]["value"], 1, -1, 1);
 
 // update background color for each nutrient
 nutrients.forEach((nutrient) => {
@@ -306,7 +306,7 @@ slider.oninput = function() {
     let newNumCups = (Math.round(this.value * 100) / 100).toFixed(2);
     
     nutrientVars["numCups"]["element"].innerHTML = newNumCups;
-    updateColor("numCups", newNumCups, 1, -1, 1);
+//     updateColor("numCups", newNumCups, 1, -1, 1);
 
     updatePortionVisualCue(newNumCups);
 
