@@ -1,0 +1,157 @@
+#content, #content p, #content table, #tipDiv, #tipDiv table, .menuLogo, a.plainText {
+    color: #333;
+    font-size: 14px;
+    line-height: 18px;
+    word-break: break-word;
+}
+
+table.blueedgebox, table.darkbluecurvedbox, table.generic, table.greencurvedbox, table.greybox, table.lightbordercurvedbox, table.lightbordercurvedrow, table.lightcurvedbox, table.lightcurvedrow, table.lightreversebox, table.orangeborderbox, table.orangebox, table.orangecurvedbox {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td.factPanel {
+    background-color: #EDF1E9;
+    padding: 5px;
+}
+
+div.nutrition_facts {
+    background-color: #FFF;
+    border: 2px solid #BCBCBC;
+    font-family: "Arial";
+    padding: 15px 9px 24px;
+    text-align: left;
+}
+
+div.nutrition_facts .left {
+    float: left;
+}
+
+div.nutrition_facts .right {
+    float: right;
+  }
+
+div.nutrition_facts .heading {
+    font-size: 22px;
+    line-height: 22px;
+    padding-bottom: 10px;
+  }
+
+  div.nutrition_facts .black {
+    font-weight: 900;
+  }
+
+
+  div.nutrition_facts .divider {
+    border-bottom: solid rgba(0, 0, 0, 0.38);
+      border-bottom-width: medium;
+    clear: both;
+  }
+
+  div.nutrition_facts .divider.thin {
+    border-width: 1px;
+  }
+
+  div.nutrition_facts.us .serving_size.serving_size_label {
+    vertical-align: bottom;
+  }
+
+  div.nutrition_facts.us .serving_size {
+    padding: 8px 0px 10px;
+  }
+
+  div.nutrition_facts .serving_size {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  div.nutrition_facts .serving_size_value{
+    font-size: 20px;
+  }
+
+  div.nutrition_facts .hero_label {
+    font-size: 19px;
+    line-height: 22px;
+    padding-bottom: 5px;
+  }
+
+  div.nutrition_facts .hero_value {
+    font-size: 26px;
+    line-height: 28px;
+    padding: 11px 0px 5px;
+  }  
+
+  div.nutrition_facts .divider.medium {
+    border-width: 4px;
+  }
+
+  div.nutrition_facts .nutrient {
+    font-size: 14px;              /* nutrition facts general font size (original: 11px) */
+    line-height: 11px;
+    padding: 4px 0px;
+  }
+
+  div.nutrition_facts .nutrient.value {
+    padding-left: 8px;
+  }
+
+  div.nutrition_facts .footnote {
+    font-size: 9px;
+    line-height: 11px;
+    padding-top: 10px;
+  }
+
+/* Current usage: <span class="recommendation-checkmark right"></span> */
+.recommendation-checkmark::before {
+    content: "\2705";  
+    color: #fff;    
+}
+
+/* Current usage: <span class="recommendation-blank"></span>*/
+.recommendation-blank::before{
+  content: "~~";  
+  color: #fff;
+  width:50px; 
+  height:50px;  
+}
+
+/* Current usage: <span class="recommendation-warning"></span>*/
+.recommendation-warning::before {
+  /* content: "\26A0;";   */
+  /* content: "⚠️"; */
+  content: "[!]";  
+  color: red;    
+  font-weight: bold;    
+}
+
+#portion-description{
+  font-size: 18px;
+}
+#portion-visual-cue{
+  font-size: 40px;  
+}
+
+#guidance-box-container{
+  border: 3px solid #000;
+  margin: 6px;
+  padding: 10px;
+}
+
+.grade-icon{
+  display: inline-block;
+  width: 80px; 
+  height: 80px; 
+  background-image: url('/assets/sprite-fdct.png'); 
+  /* C+ */
+  /*background-position: 0 50%; */ 
+
+  /* B */
+  /* background-position: 0 70%; */
+
+  /* A- */
+  background-position: 0 90%;
+
+  background-size: 100%;
+  vertical-align: middle;
+}
+
