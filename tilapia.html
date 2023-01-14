@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Interfactive: Interactive Nutrition Facts</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">                        
+
+        <!-- JQuery -->        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="stylesheets/nutrition-facts.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheets/slider.css" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- TOP NAVIGATION MENU -->
+        <!-- <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+            <h5 class="my-0 mr-md-auto font-weight-normal" id="logo">Interfactive</h5>
+            <nav class="my-2 my-md-0 mr-md-3">              
+              <a class="p-2 text-dark" href="#">About</a>
+              <a class="p-2 text-dark" href="#">Explore</a>              
+            </nav>            
+        </div> -->
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+            <div class="row row-pb-md">
+                <h2 style="padding:20px">Baked Tilapia
+                    <!-- <div class="grade-icon"></div> -->
+                </h2>
+            </div>
+            <!-- <div class="row row-pb-md">
+                <h3>Health Grade:                     
+                    <div class="grade-icon"></div>
+                </h3><br>
+            </div> -->
+            <div class="row row-pb-md">
+                <div class="col-sm-6 col-md-6">
+                    <!-- <h3>Health Grade: <b style="color:green">B+</b></h3> -->
+                    
+                    <!-- <h3>Health Grade:                     
+                        <div class="grade-icon"></div>
+                    </h3><br> -->
+                    <!-- <h3>Portion suggestion: <b>&leq; 1 cup</b></h3><br> -->
+                    <h3>Adjust Portion</h3>
+                    <div class="portion-visual-cue-container">
+                        <span id="portion-description">Size of 2.00 of your fists</span><br> 
+                        <span id="portion-visual-cue">✊✊</span><!-- ✋✋ ✊ 🤲 -->
+                    </div>
+                    <div class="slidecontainer" style="display:inline-block; padding-bottom: 20px;">
+                        <!-- ENTUS: default value here should be recipe's default serving size -->
+                        0 cups&nbsp;<input type="range" min="0.1" max="5" value="2" step="0.05" class="slider" id="portionChanger">&nbsp;5 cups
+                    </div>                      
+                    <!-- <div id="guidance-box-container">
+                        <h5>Details</h5>
+                        <div id="guidance-box">
+                            <i>Additional information will display here if available.</i>
+                        </div>
+                    </div> -->
+                    
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <table>
+                        <td class="factPanel" width="325px" height="100%">  <!-- original width: 255px-->
+                            <div class="nutrition_facts us">
+                                <div class="heading black">Nutrition Facts</div>
+                                <div class="divider thin"></div>                                                      
+                                <table class="serving_size">
+                                    <colgroup>
+                                        <col width="90px">
+                                        <col width="*">
+                                    </colgroup>
+                                    <tbody><tr>
+                                        <td class="serving_size black us serving_size_label">Serving Size</td>
+                                        <td class="serving_size black us serving_size_value">
+                                            <!-- 1 cup (59 g) -->
+                                            <span id="numCups">2.00</span> cup                                            
+                                        </td>
+                                        <!-- <td>
+                                                &nbsp;<span id="recommendationCups">
+                                                    <span class="recommendation-checkmark"></span>
+                                                </span>
+                                        </td>    -->
+                                    </tr>
+                                </tbody></table>
+                                <div class="divider thick"></div>
+                                <div class="nutrient black">Amount Per Serving</div>
+                                <div class="hero_label black">Calories 
+                                    <span id="numCalories">582</span>                                    
+                                </div>      
+                                
+                                <div class="divider medium"></div>
+
+                                <div class="nutrient black right">% Daily Values*</div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient black left">Total Fat</div>
+                                <div class="nutrient value left"><span id="numFat">12.3</span>g</div>
+                                <div class="nutrient black right"><span id="percentFat">16</span>%
+                                    &nbsp;<span id="recommendationFat">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                    
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient sub left">Saturated Fat</div>
+                                <div class="nutrient value left"><span id="numSaturated-Fat">4.3</span>g</div>
+                                <div class="nutrient black right"><span id="percentSaturated-Fat">22</span>%
+                                    &nbsp;<span id="recommendationSatFat">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient sub left"><i>Trans</i> Fat</div>
+                                <div class="nutrient value left"><span id="numTrans-Fat">0</span>g</div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient sub left">Polyunsaturated Fat</div>
+                                <div class="nutrient value left"><span id="numPolyunsaturated-Fat">0</span>g</div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient sub left">Monounsaturated Fat</div>
+                                <div class="nutrient value left"><span id="numMonounsaturated-Fat">0</span>g</div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient black left">Cholesterol</div>
+                                <div class="nutrient value left"><span id="numCholesterol">256</span>mg</div>
+                                <div class="nutrient black right"><span id="percentCholesterol">85</span>%
+                                    &nbsp;<span id="recommendationCholesterol">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient black left">Sodium</div>
+                                <div class="nutrient value left"><span id="numSodium">256</span>mg</div>
+                                <div class="nutrient black right"><span id="percentSodium">11</span>%
+                                    &nbsp;<span id="recommendationSodium">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient black left">Total Carbohydrate</div>
+                                <div class="nutrient value left"><span id="numCarbs">0</span>g</div>
+                                <div class="nutrient black right"><span id="percentCarbs">0</span>%
+                                    &nbsp;<span id="recommendationCarbs">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+                                
+                                <div class="nutrient sub left">Dietary Fiber</div>
+                                <div class="nutrient value left"><span id="numFiber">0</span>g</div>
+                                <div class="nutrient black right"><span id="percentFiber">0</span>%
+                                    &nbsp;<span id="recommendationFiber">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient sub left">Sugars</div>
+                                <div class="nutrient value left"><span id="numSugars">0</span>g</div>
+                                <div class="divider thin"></div>
+                                <div class="nutrient left" style="text-indent:22px">Includes <span id="numAdded-Sugars">0</span>g Added Sugars</div>
+                                <div class="nutrient black right"><span id="percentSugars">0</span>%
+                                    &nbsp;<span id="recommendationSugars">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient black left">Protein</div>
+                                <div class="nutrient value left"><span id="numProtein">117.5</span>g</div>
+                                <div class="divider thick"></div>
+
+                                <div class="nutrient left">Vitamin D</div>
+                                <div class="nutrient value left"><span id="numVitamin-D">17.1</span>mcg</div>
+                                <div class="nutrient right"><span id="percentVitamin-D">86</span>%
+                                    &nbsp;<span id="recommendationVitaD">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient left">Calcium</div>
+                                <div class="nutrient value left"><span id="numCalcium">64.1</span>mg</div>
+                                <div class="nutrient right"><span id="percentCalcium">5</span>%
+                                    &nbsp;<span id="recommendationCalcium">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient left">Iron</div>
+                                <div class="nutrient value left"><span id="numIron">5.3</span>mg</div>
+                                <div class="nutrient right"><span id="percentIron">29</span>%
+                                    &nbsp;<span id="recommendationIron">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider thin"></div>
+
+                                <div class="nutrient left">Potassium</div>
+                                <div class="nutrient value left"><span id="numPotassium">1724.8</span>mg</div>
+                                <div class="nutrient right"><span id="percentPotassium">37</span>%
+                                    &nbsp;<span id="recommendationPotassium">
+                                        <span class="recommendation-blank"></span>
+                                    </span>
+                                </div>
+                                <div class="divider medium"></div>
+
+                                <div class="footnote">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.**</div>
+                                <div class="footnote">**Please note that some foods may not be suitable for some people and you are urged to seek the advice of a physician before beginning any weight loss effort or diet regimen. This website makes no representations or warranties as to its completeness or accuracy. All information, including nutritional values, is used by you at your own risk. 
+
+                            </div>
+                        </td>
+                    </table>                    
+                </div>
+                
+            </div>
+        </div>        
+
+        <!-- FOOTER -->
+        <!-- <div class="container">
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                <div class="col-12 col-md">
+                    <span id="logo">Interfactive</span>
+                    <small class="d-block mb-3 text-muted">&copy; 2022-now. All rights reserved.</small>                    
+                </div>
+              
+                </div>
+            </footer>            
+        </div>  -->
+
+        <script src="js/slider-no-advice.js"></script>         
+    </body>
+    </html>
