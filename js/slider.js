@@ -257,12 +257,12 @@ function updateGuidanceBox(){
     let advice = "<ul>";    
 
     let newNumCups = (Math.round(slider.value * 100) / 100).toFixed(2);
-    if (newNumCups > 1){
-        advice += "<li><span class='recommendation-warning'></span> Portion size is <b>higher than expected</b>.</li>";
-    }
-    else{
-        advice += "<li>Portion size is reasonable.</li>";
-    }
+//     if (newNumCups > 1){
+//         advice += "<li><span class='recommendation-warning'></span> Portion size is <b>higher than expected</b>.</li>";
+//     }
+//     else{
+//         advice += "<li>Portion size is reasonable.</li>";
+//     }
 
 
     nutrients.forEach((nutrient) => {
