@@ -194,7 +194,7 @@ function updatePortionVisualCue(newNumCups){
     let fistFraction = numFists - Math.floor(numFists);
     let fistFractionPercent = 100 - (fistFraction * 100);
 
-    description = "Size of " + numFists + " of your fists";
+    description = "Size of <b style='background:#fff; padding:4px 4px;'>" + numFists + "</b> of your fists";
     
     // let currentFistID = 0;
     let currentFistID = 1;
@@ -204,7 +204,7 @@ function updatePortionVisualCue(newNumCups){
     }
     
     if (numFists == 0.5){
-        description = "Size of half of your fist"
+        description = "Size of <b style='background:#fff; padding:4px 4px;'>half</b> of your fist"
     }    
 
     let portionDescription = document.getElementById("portion-description");
