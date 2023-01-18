@@ -39,7 +39,8 @@ updateThresholds("numTrans-Fat", -1, 0, -1, 0, -1, false);
 updateThresholds("numCholesterol", 300, -1, -1, -1, -1, false);      
 updateThresholds("numSodium", 2300, 200, 765, 766, -1, false); // 200, 349, 350
 updateThresholds("numCarbs", 300, -1, -1, -1, -1, true);   
-updateThresholds("numFiber", 28, 3, -1, 2, 23, true); 
+// updateThresholds("numFiber", 28, 3, -1, 2, 23, true); 
+updateThresholds("numFiber", 28, -1, -1, 2, 23, true); 
 updateThresholds("numSugars", 50, -1, -1, -1, -1, false);
 updateThresholds("numAdded-Sugars", -1, -1, -1, 4.8, -1, false);   //20% DV or more of added sugars per serving is considered high; 5% DV or less of added sugars per serving is considered low
 
