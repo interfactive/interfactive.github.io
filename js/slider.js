@@ -289,6 +289,10 @@ function updateGuidanceBox(){
         }
     });
 
+    if (advice == "<ul>"){
+        advice += "<li> <b style='background:lightgreen; padding: 10px;'>Looks good!</b> </li>";
+    }
+    
     advice += "</ul>"
 
     guidanceElement.innerHTML = advice;
