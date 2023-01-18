@@ -291,7 +291,7 @@ function updateGuidanceBox(){
     });
 
     if (advice == "<ul>"){
-        advice += "<li> <b style='background:lightgreen; padding: 10px;'>Looks good!</b> </li>";
+        advice += "<li> <b style='background: #DAF7A6;'>Good source of nutrition if portion size is correct</b> </li>";
     }
     
     advice += "</ul>"
